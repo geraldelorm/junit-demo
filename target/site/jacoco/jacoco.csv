@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+TDD,com.pluralsight.tddjunit5.airconditioning,Sensor,10,0,0,0,4,0,3,0,3,0
+TDD,com.pluralsight.tddjunit5.airconditioning,AirConditioningSystem,0,30,0,2,0,10,0,6,0,5
+TDD,com.pluralsight.tddjunit5.airconditioning,Thermometer,0,26,0,2,0,9,0,6,0,5
+TDD,com.pluralsight.tddjunit5.database,DatabaseUtil,3,85,0,6,2,12,1,4,1,1
+TDD,com.pluralsight.tddjunit5.database,Database,24,37,4,0,4,16,3,5,1,5
+TDD,com.pluralsight.tddjunit5.database,Credentials,4,66,4,6,0,16,4,8,0,7
+TDD,com.pluralsight.tddjunit5.milage,Milage,0,91,0,6,0,14,0,7,0,4
+TDD,com.pluralsight.tddjunit5.airport,BusinessFlight,0,16,0,2,0,6,0,4,0,3
+TDD,com.pluralsight.tddjunit5.airport,Passenger,4,43,3,3,0,11,3,5,0,5
+TDD,com.pluralsight.tddjunit5.airport,EconomyFlight,0,19,0,2,0,6,0,4,0,3
+TDD,com.pluralsight.tddjunit5.airport,PremiumFlight,0,24,0,4,0,8,0,5,0,3
+TDD,com.pluralsight.tddjunit5.airport,Flight,0,25,0,0,0,9,0,5,0,5

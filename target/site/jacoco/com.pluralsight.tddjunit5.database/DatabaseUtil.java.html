@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DatabaseUtil.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TDD</a> &gt; <a href="index.source.html" class="el_package">com.pluralsight.tddjunit5.database</a> &gt; <span class="el_source">DatabaseUtil.java</span></div><h1>DatabaseUtil.java</h1><pre class="source lang-java linenums">package com.pluralsight.tddjunit5.database;
+
+import com.pluralsight.tddjunit5.airport.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DatabaseUtil {
+
+<span class="nc" id="L10">    private DatabaseUtil() {</span>
+
+<span class="nc" id="L12">    }</span>
+
+    public static List&lt;Flight&gt; buildFlightsList(List&lt;List&lt;String&gt;&gt; queriedData) {
+<span class="fc" id="L15">        List&lt;Flight&gt; flightsList = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        for (List&lt;String&gt; row: queriedData) {</span>
+            Flight flight;
+<span class="fc bfc" id="L18" title="All 2 branches covered.">            if (row.get(1).equals(&quot;e&quot;)) {</span>
+<span class="fc" id="L19">                flight = new EconomyFlight(row.get(0));</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            } else if (row.get(1).equals(&quot;b&quot;)) {</span>
+<span class="fc" id="L21">                flight = new BusinessFlight(row.get(0));</span>
+            } else {
+<span class="fc" id="L23">                flight = new PremiumFlight(row.get(0));</span>
+            }
+<span class="fc" id="L25">            flight.addPassenger(new Passenger(row.get(2), Boolean.valueOf(row.get(3))));</span>
+<span class="fc" id="L26">            flight.setDistance(Integer.valueOf(row.get(4)));</span>
+<span class="fc" id="L27">            flightsList.add(flight);</span>
+<span class="fc" id="L28">        }</span>
+<span class="fc" id="L29">        return flightsList;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
